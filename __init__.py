@@ -8,10 +8,10 @@ HOOK_INIT_OLD = ranger.api.hook_init
 
 
 def hook_init(fm):
-    HOOK_INIT_OLD(fm)
-
     fm.execute_console('map YY eval fm.execute_console("yoink %s") '
                        'if fm.thisdir.marked_items else fm.execute_console("yoink %f")')
+
+    return HOOK_INIT_OLD(fm)
 
 
 ranger.api.hook_init = hook_init
