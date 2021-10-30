@@ -19,7 +19,7 @@ ranger.api.hook_init = hook_init
 
 class yoink(ranger.api.commands.Command):
     """
-    :yoink
+    :yoink <paths...>
 
     Send to Yoink
     """
